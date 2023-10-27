@@ -148,9 +148,13 @@ VALUES
     (5, 5, 105),  -- Selena has Queen's Wings
     (6, 6, 106),  -- Hayabusa has Endless Battle
     (7, 7, 107),  -- Franco has Necklace of Durance
-    (8, 8, 108),  -- Fanny has Thunder Belt
+    (8, 8, 108),  -- Fanny has Thunder Beltgi
     (9, 9, 109),  -- Leomord has Blade Armor
     (10, 10, 110);  -- Chou has Feather of Heaven
 
 ALTER TABLE item_table
 ADD item_price DECIMAL(10, 2);
+
+UPDATE public.hero
+SET is_active = false
+WHERE hero_id = 1;
